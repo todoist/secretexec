@@ -33,7 +33,7 @@ jobs:
         id: meta
         with:
           images: |
-            ghcr.io/doist/secretexec
+            ghcr.io/todoist/secretexec
             public.ecr.aws/n9b3m5a6/doist/secretexec
           tags: |
             type=semver,pattern={{version}}
@@ -52,6 +52,6 @@ jobs:
           cache-to: type=gha,mode=max
       - uses: actions/attest-build-provenance@v1
         with:
-          subject-name: ghcr.io/doist/secretexec
+          subject-name: ghcr.io/todoist/secretexec
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
